@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Checkout our portfolio of web design, web development, SEO and social media marketing.">
+<meta name="robots" content="index, follow">
+<title>Our Work – Omnivision Design</title>
+
+<!-- Open Graph -->
+<meta property="og:title" content="Our Work – Omnivision Design">
+<meta property="og:description" content="Portfolio of web design, web development, SEO and social media marketing by Omnivision Design, Montreal.">
+<meta property="og:image" content="https://www.omnivisiondesign.com/wp-content/uploads/ewpt_cache/653x490_100_1_c_FFFFFF_5aefad5ac20ca779f335ef065d8105ea.png">
+<meta property="og:url" content="https://www.omnivisiondesign.com/our-work/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Omnivision Design">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Our Work – Omnivision Design">
+<meta name="twitter:description" content="Portfolio of web design, web development, SEO and social media marketing by Omnivision Design, Montreal.">
+<meta name="twitter:image" content="https://www.omnivisiondesign.com/wp-content/uploads/ewpt_cache/653x490_100_1_c_FFFFFF_5aefad5ac20ca779f335ef065d8105ea.png">
+<meta name="twitter:site" content="@omnivisiondes">
+
+<!-- Canonical -->
+<link rel="canonical" href="https://www.omnivisiondesign.com/our-work/">
+
+<!-- Font preloads -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Omnivision Design",
+  "url": "https://www.omnivisiondesign.com",
+  "logo": "https://www.omnivisiondesign.com/wp-content/uploads/ewpt_cache/653x490_100_1_c_FFFFFF_5aefad5ac20ca779f335ef065d8105ea.png",
+  "description": "Montreal web marketing agency offering web design, SEO, SEM, social media marketing and more.",
+  "telephone": "+15146556276",
+  "address": [
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "106-7470 Sherbrooke St W",
+      "addressLocality": "Montreal",
+      "addressRegion": "QC",
+      "postalCode": "H4B 1S5",
+      "addressCountry": "CA"
+    }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/omnivision.design",
+    "https://twitter.com/omnivisiondes",
+    "http://ca.linkedin.com/in/omnivisiondesign",
+    "https://www.instagram.com/omnivisiondesign/"
+  ]
+}
+</script>
+
+<style>
+/* ═══════════════════════════════════════════════════════════
+   § 1. DESIGN TOKENS & CSS CUSTOM PROPERTIES
+═══════════════════════════════════════════════════════════ */
+:root {
+  /* Colors */
+  --bg:#f8f4f9;--bg2:#f2edf5;--surface:#ffffff;--surface2:#fdf7ff;
+  --border:rgba(220,190,230,0.5);--border-h:rgba(255,60,160,0.25);
+  --pink:#ff2d87;--pink2:#ff6eb4;--pink3:#ffd6ec;--rose:#e8006a;
+  --violet:#9b30d6;--text:#1a0a24;--text2:#5a3a6e;--muted:#9b7aae;
+  /* Typography */
+  --font-h:'Syne',sans-serif;--font-b:'DM Sans',sans-serif;
+  /* Spacing */
+  --space-xs:.4rem;--space-sm:.8rem;--space-md:1.2rem;--space-lg:2rem;--space-xl:4rem;
+  /* Shape */
+  --card-r:20px;--pill:50px;
+  /* Shadows */
+  --shadow-card:0 2px 12px rgba(155,122,174,0.1);
+  --shadow-card-hover:0 24px 60px rgba(255,45,135,0.18);
+  --shadow-cta:0 6px 24px rgba(255,45,135,.35);
+  /* Transitions */
+  --ease-apple:cubic-bezier(0.25,0.1,0.25,1);
+  --ease-spring:cubic-bezier(0.22,1,0.36,1);
+  --ease-flip:cubic-bezier(0.4,0,0.2,1);
+  --t-fast:.2s;--t-med:.38s;--t-flip:.6s;
+}
+
+/* Dark mode */
+@media(prefers-color-scheme:dark){
+  :root{
+    --bg:#0f0618;--bg2:#160920;--surface:#1c0e28;--surface2:#140720;
+    --border:rgba(155,48,214,0.25);--border-h:rgba(255,45,135,0.3);
+    --text:#f0e8f8;--text2:#c4a8d8;--muted:#8060a0;
+  }
+}
+
+/* Reduced motion */
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;}
+  .card-inner{transform:none!important;}
+  .card-front,.card-back{backface-visibility:visible!important;}
+  .gsap-fade{opacity:1!important;transform:none!important;}
+  .card-entry{opacity:1!important;transform:none!important;}
+}
+
+/* ═══════════════════════════════════════════════════════════
+   § 2. RESET & BASE
+═══════════════════════════════════════════════════════════ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:var(--font-b);overflow-x:hidden;cursor:none;}
+a{color:inherit;text-decoration:none;}
+img{display:block;max-width:100%;}
+
+/* ═══════════════════════════════════════════════════════════
+   § 3. SKIP LINK (Accessibility)
+═══════════════════════════════════════════════════════════ */
+.skip-link{position:absolute;top:-999px;left:1rem;padding:.6rem 1.2rem;background:var(--pink);color:#fff;border-radius:0 0 8px 8px;font-family:var(--font-h);font-weight:700;font-size:.85rem;z-index:10000;transition:top .2s;}
+.skip-link:focus{top:0;}
+
+/* ═══════════════════════════════════════════════════════════
+   § 4. FOCUS VISIBLE
+═══════════════════════════════════════════════════════════ */
+:focus-visible{outline:2px solid var(--pink);outline-offset:3px;border-radius:4px;}
+
+/* ═══════════════════════════════════════════════════════════
+   § 5. CUSTOM CURSOR
+═══════════════════════════════════════════════════════════ */
+#cursor{position:fixed;width:22px;height:22px;border-radius:50%;background:var(--pink);mix-blend-mode:multiply;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .15s,height .15s,opacity .2s;box-shadow:0 0 20px rgba(255,45,135,0.5);}
+#cursor.grow{width:50px;height:50px;opacity:.6;}
+
+/* ═══════════════════════════════════════════════════════════
+   § 6. DECORATIVE OVERLAYS
+═══════════════════════════════════════════════════════════ */
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:0;opacity:.2;}
+body::after{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 60% 50% at 10% 20%,rgba(255,45,135,0.07) 0%,transparent 60%),radial-gradient(ellipse 50% 40% at 90% 80%,rgba(155,48,214,0.06) 0%,transparent 60%),radial-gradient(ellipse 40% 60% at 50% 50%,rgba(255,110,180,0.04) 0%,transparent 70%);pointer-events:none;z-index:0;}
+
+/* ═══════════════════════════════════════════════════════════
+   § 7. NAVIGATION
+═══════════════════════════════════════════════════════════ */
+nav{position:sticky;top:0;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(1.2rem,4vw,3rem);height:72px;background:rgba(248,244,249,0.85);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--border);}
+.nav-logo{font-family:var(--font-h);font-weight:800;font-size:1.25rem;letter-spacing:-.02em;background:linear-gradient(120deg,var(--pink),var(--violet));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.nav-links{display:flex;gap:2rem;list-style:none;}
+.nav-links a{font-size:.88rem;color:var(--muted);transition:color .25s;font-weight:500;}
+.nav-links a:hover,.nav-links a.active{color:var(--text);}
+.nav-cta{padding:.5rem 1.3rem;background:linear-gradient(135deg,var(--pink),var(--violet));border-radius:var(--pill);font-size:.82rem;font-weight:600;font-family:var(--font-h);color:#fff;letter-spacing:.04em;transition:opacity var(--t-fast),transform var(--t-fast),box-shadow var(--t-fast);box-shadow:0 4px 20px rgba(255,45,135,.3);position:relative;display:inline-block;min-height:44px;min-width:44px;display:flex;align-items:center;}
+.nav-cta:hover{opacity:.9;box-shadow:0 6px 28px rgba(255,45,135,.45);}
+.nav-phone{font-size:.82rem;color:var(--muted);}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;min-width:44px;min-height:44px;align-items:center;justify-content:center;background:none;border:none;}
+.hamburger span{width:24px;height:2px;background:var(--text);border-radius:2px;transition:.3s;}
+
+/* Mobile nav drawer */
+#mobileMenu{position:fixed;inset:0;background:rgba(248,244,249,.97);z-index:490;padding:6rem 2rem 2rem;backdrop-filter:blur(20px);max-height:0;overflow:hidden;transition:max-height .4s var(--ease-spring),opacity .3s;opacity:0;pointer-events:none;}
+#mobileMenu.open{max-height:100vh;opacity:1;pointer-events:all;}
+#mobileMenu ul{list-style:none;display:flex;flex-direction:column;gap:1.8rem;}
+#mobileMenu a{font-family:var(--font-h);font-size:1.6rem;font-weight:700;color:var(--text);}
+#mobileMenu a.active-link{color:var(--pink);}
+#mobileMenu .menu-close{position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;color:var(--pink);font-size:2rem;cursor:pointer;min-width:44px;min-height:44px;display:flex;align-items:center;justify-content:center;}
+
+@media(max-width:900px){.nav-links,.nav-phone{display:none;}.hamburger{display:flex;}}
+
+/* ═══════════════════════════════════════════════════════════
+   § 8. HERO
+═══════════════════════════════════════════════════════════ */
+.hero{position:relative;padding:clamp(5rem,12vw,9rem) clamp(1.2rem,6vw,5rem) clamp(3rem,6vw,5rem);text-align:center;overflow:hidden;z-index:1;}
+.hero-orb{position:absolute;border-radius:50%;filter:blur(90px);pointer-events:none;}
+.orb1{width:600px;height:600px;background:rgba(255,45,135,0.12);top:-200px;left:-150px;}
+.orb2{width:500px;height:500px;background:rgba(155,48,214,0.10);top:-100px;right:-120px;}
+.orb3{width:400px;height:400px;background:rgba(255,110,180,0.08);bottom:-100px;left:50%;transform:translateX(-50%);}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--pink);border:1px solid rgba(255,45,135,0.25);background:rgba(255,45,135,0.06);padding:.38rem 1.1rem;border-radius:var(--pill);margin-bottom:1.6rem;font-family:var(--font-h);}
+.hero-eyebrow::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--pink);box-shadow:0 0 8px var(--pink);}
+.hero h1{font-family:var(--font-h);font-size:clamp(2.8rem,7vw,6rem);font-weight:800;line-height:1.05;letter-spacing:-.04em;margin-bottom:1.2rem;color:var(--text);}
+.hero h1 .word{display:inline-block;overflow:hidden;vertical-align:bottom;}
+.hero h1 .word-inner{display:inline-block;}
+.hero h1 span{background:linear-gradient(120deg,var(--pink),var(--violet));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;position:relative;}
+.hero-sub{max-width:580px;margin:0 auto 1rem;font-size:clamp(.95rem,2vw,1.05rem);color:var(--text2);line-height:1.7;}
+.breadcrumb{font-size:.8rem;color:var(--muted);margin-top:1rem;}
+.breadcrumb a{color:var(--pink);font-weight:500;}
+.hero-line{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:1px;height:60px;background:linear-gradient(to bottom,transparent,rgba(255,45,135,0.35));}
+
+/* ═══════════════════════════════════════════════════════════
+   § 9. FILTER BUTTONS
+═══════════════════════════════════════════════════════════ */
+.filters-wrap{display:flex;justify-content:center;flex-wrap:wrap;gap:.65rem;padding:2.5rem clamp(1.2rem,5vw,4rem) 1rem;position:relative;z-index:1;}
+.filter-btn{padding:.5rem 1.3rem;border-radius:var(--pill);border:1px solid var(--border);background:var(--surface);color:var(--muted);font-family:var(--font-h);font-size:.82rem;font-weight:600;cursor:none;transition:background .25s,color .25s,border-color .25s,transform var(--t-fast),box-shadow .25s;letter-spacing:.04em;box-shadow:0 1px 4px rgba(155,122,174,0.08);min-height:44px;min-width:44px;}
+.filter-btn:hover{color:var(--text);border-color:rgba(255,45,135,.3);transform:translateY(-2px) scale(1.05);box-shadow:0 4px 16px rgba(255,45,135,.1);}
+.filter-btn.active{background:linear-gradient(135deg,var(--pink),var(--violet));color:#fff;border-color:transparent;box-shadow:var(--shadow-cta);transform:translateY(-1px) scale(1.05);}
+
+/* ═══════════════════════════════════════════════════════════
+   § 10. PORTFOLIO GRID
+═══════════════════════════════════════════════════════════ */
+.grid-section{padding:2rem clamp(1rem,4vw,3.5rem) 5rem;position:relative;z-index:1;}
+.portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
+@media(max-width:900px){.portfolio-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:480px){.portfolio-grid{grid-template-columns:1fr;}}
+
+/* ═══════════════════════════════════════════════════════════
+   § 11. FLIP CARDS
+═══════════════════════════════════════════════════════════ */
+.card{position:relative;border-radius:var(--card-r);cursor:none;height:340px;perspective:1000px;}
+.card-entry{opacity:0;}
+.card-entry.from-left{transform:translateX(-60px);}
+.card-entry.from-right{transform:translateX(60px);}
+.card-entry.from-bottom{transform:translateY(60px);}
+.card-entry.visible{opacity:1;transform:translate(0,0);transition:opacity .6s var(--ease-spring),transform .6s var(--ease-spring);}
+.card-inner{width:100%;height:100%;position:relative;transform-style:preserve-3d;transition:transform var(--t-flip) var(--ease-flip);}
+.card:hover .card-inner,.card.flipped .card-inner{transform:rotateY(180deg);}
+.card-front,.card-back{position:absolute;inset:0;border-radius:var(--card-r);backface-visibility:hidden;-webkit-backface-visibility:hidden;overflow:hidden;border:1px solid var(--border);}
+.card-front{background:var(--surface);box-shadow:var(--shadow-card);transition:box-shadow var(--t-med) var(--ease-apple),transform var(--t-med) var(--ease-apple);}
+.card:hover .card-front{box-shadow:var(--shadow-card-hover);}
+.card-front::before{content:'';position:absolute;inset:0;border-radius:var(--card-r);background:linear-gradient(135deg,rgba(255,45,135,0.04),rgba(155,48,214,0.03));opacity:0;transition:opacity .3s;z-index:0;pointer-events:none;}
+.card:hover .card-front::before{opacity:1;}
+.card-back{background:linear-gradient(135deg,rgba(255,45,135,.07),rgba(155,48,214,.1));transform:rotateY(180deg);display:flex;flex-direction:column;justify-content:center;padding:1.5rem;border-color:rgba(255,45,135,.2);box-shadow:var(--shadow-card-hover);}
+.card-img-wrap{position:relative;overflow:hidden;height:calc(100% - 64px);background:var(--bg2);}
+.card-img-wrap img{width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease-spring);}
+.card:hover .card-img-wrap img{transform:scale(1.07);}
+.card-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(255,255,255,0.92) 100%);opacity:0;transition:opacity .32s;display:flex;align-items:flex-end;justify-content:center;padding-bottom:1.2rem;}
+.card:hover .card-overlay{opacity:1;}
+.view-btn{display:flex;align-items:center;gap:.4rem;padding:.5rem 1.2rem;background:linear-gradient(135deg,var(--pink),var(--violet));border-radius:var(--pill);font-size:.8rem;font-weight:600;font-family:var(--font-h);color:#fff;letter-spacing:.04em;pointer-events:none;transform:translateY(10px);transition:transform .3s;box-shadow:0 4px 18px rgba(255,45,135,.4);}
+.card:hover .view-btn{transform:translateY(0);}
+.card-body{padding:1rem 1.1rem 1.2rem;display:flex;align-items:center;justify-content:space-between;position:relative;z-index:1;height:64px;}
+.card-title{font-family:var(--font-h);font-size:.95rem;font-weight:700;letter-spacing:-.01em;color:var(--text);}
+.card-tag{font-size:.68rem;font-weight:600;font-family:var(--font-h);letter-spacing:.08em;text-transform:uppercase;padding:.25rem .75rem;border-radius:var(--pill);border:1px solid rgba(255,45,135,0.2);color:var(--pink);background:rgba(255,45,135,.06);white-space:nowrap;}
+.card.hidden{display:none;}
+/* Back face content */
+.card-back-tag{font-size:.65rem;font-weight:700;font-family:var(--font-h);letter-spacing:.1em;text-transform:uppercase;color:var(--pink);background:rgba(255,45,135,.1);border:1px solid rgba(255,45,135,.2);padding:.2rem .7rem;border-radius:var(--pill);margin-bottom:.7rem;display:inline-block;}
+.card-back-title{font-family:var(--font-h);font-size:1.05rem;font-weight:800;color:var(--text);margin-bottom:.6rem;letter-spacing:-.02em;line-height:1.2;}
+.card-back-desc{font-size:.78rem;color:var(--text2);line-height:1.6;margin-bottom:.9rem;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden;}
+.card-back-meta{display:flex;flex-wrap:wrap;gap:.35rem;margin-bottom:.9rem;}
+.card-back-meta span{font-size:.65rem;font-weight:600;font-family:var(--font-h);padding:.2rem .6rem;border-radius:var(--pill);border:1px solid var(--border);color:var(--text2);background:var(--surface);}
+.card-back-btn{display:inline-flex;align-items:center;gap:.4rem;padding:.5rem 1.1rem;background:linear-gradient(135deg,var(--pink),var(--violet));border-radius:var(--pill);font-size:.78rem;font-weight:700;font-family:var(--font-h);color:#fff;letter-spacing:.04em;box-shadow:0 4px 16px rgba(255,45,135,.35);align-self:flex-start;border:none;cursor:pointer;min-height:44px;}
+.card-back-btn:hover{opacity:.88;transform:translateY(-1px);}
+
+/* ═══════════════════════════════════════════════════════════
+   § 12. MODAL
+═══════════════════════════════════════════════════════════ */
+.modal-overlay{position:fixed;inset:0;background:rgba(26,10,36,.55);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);z-index:1000;display:flex;align-items:center;justify-content:center;padding:1rem;opacity:0;pointer-events:none;transition:opacity .3s;}
+.modal-overlay.open{opacity:1;pointer-events:all;}
+.modal{background:var(--surface);border:1px solid rgba(255,45,135,.15);border-radius:24px;width:100%;max-width:700px;max-height:90vh;overflow-y:auto;padding:0;transform:scale(.92);transition:transform .38s var(--ease-spring),opacity .3s;scrollbar-width:thin;scrollbar-color:var(--pink) transparent;box-shadow:0 40px 100px rgba(26,10,36,0.2),0 0 0 1px rgba(255,45,135,.08);opacity:0;position:relative;}
+.modal-overlay.open .modal{transform:scale(1);opacity:1;}
+.modal-img-wrap{position:relative;overflow:hidden;border-radius:24px 24px 0 0;}
+.modal-img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:24px 24px 0 0;display:block;transition:transform .1s ease-out;}
+.modal-body{padding:1.8rem 2rem 2rem;}
+.modal-tag{display:inline-block;font-size:.72rem;font-weight:700;font-family:var(--font-h);letter-spacing:.1em;text-transform:uppercase;color:var(--pink);background:rgba(255,45,135,.08);border:1px solid rgba(255,45,135,.2);padding:.28rem .8rem;border-radius:var(--pill);margin-bottom:1rem;}
+.modal-title{font-family:var(--font-h);font-size:clamp(1.4rem,3vw,2rem);font-weight:800;letter-spacing:-.03em;margin-bottom:.8rem;line-height:1.15;color:var(--text);}
+.modal-desc{color:var(--text2);font-size:.95rem;line-height:1.75;margin-bottom:1.4rem;}
+.modal-meta{display:flex;flex-wrap:wrap;gap:.7rem;margin-bottom:1.6rem;}
+.modal-meta span{font-size:.78rem;font-weight:600;font-family:var(--font-h);letter-spacing:.04em;padding:.3rem .9rem;border-radius:var(--pill);border:1px solid var(--border);color:var(--text2);background:var(--bg2);}
+.modal-close{position:absolute;top:1.1rem;right:1.2rem;width:44px;height:44px;border-radius:50%;background:rgba(255,45,135,.08);border:1px solid rgba(255,45,135,.15);color:var(--pink);font-size:1.1rem;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .2s,transform .2s;z-index:10;}
+.modal-close:hover{background:rgba(255,45,135,.15);transform:scale(1.1);}
+
+/* ═══════════════════════════════════════════════════════════
+   § 13. CTA STRIP
+═══════════════════════════════════════════════════════════ */
+.cta-strip{margin:0 clamp(1rem,4vw,3.5rem) 5rem;border-radius:24px;padding:clamp(2.5rem,5vw,4rem) clamp(2rem,5vw,4rem);background:linear-gradient(135deg,rgba(255,45,135,.07),rgba(155,48,214,.07));border:1px solid rgba(255,45,135,.15);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.5rem;position:relative;z-index:1;overflow:hidden;}
+.cta-strip::before{content:'';position:absolute;top:-80px;right:-80px;width:300px;height:300px;border-radius:50%;background:rgba(255,45,135,.07);filter:blur(60px);pointer-events:none;}
+.cta-strip h2{font-family:var(--font-h);font-size:clamp(1.5rem,3vw,2.2rem);font-weight:800;letter-spacing:-.03em;max-width:500px;line-height:1.2;color:var(--text);}
+.cta-strip h2 span{background:linear-gradient(120deg,var(--pink),var(--violet));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.cta-strip-actions{display:flex;gap:1rem;flex-wrap:wrap;align-items:center;}
+.cta-primary{padding:.75rem 2rem;background:linear-gradient(135deg,var(--pink),var(--violet));border-radius:var(--pill);font-family:var(--font-h);font-weight:700;font-size:.9rem;letter-spacing:.04em;color:#fff;transition:opacity var(--t-fast),transform var(--t-fast),box-shadow var(--t-fast);box-shadow:var(--shadow-cta);min-height:44px;display:inline-flex;align-items:center;}
+.cta-primary:hover{opacity:.9;transform:translateY(-2px);box-shadow:0 10px 32px rgba(255,45,135,.45);}
+.cta-phone{color:var(--muted);font-size:.9rem;}
+.cta-phone a{color:var(--pink);font-weight:600;}
+
+/* ═══════════════════════════════════════════════════════════
+   § 14. PARTNERS
+═══════════════════════════════════════════════════════════ */
+.partners{padding:3rem clamp(1.2rem,5vw,4rem);border-top:1px solid var(--border);border-bottom:1px solid var(--border);position:relative;z-index:1;overflow:hidden;background:var(--surface2);}
+.partners-label{text-align:center;font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);font-family:var(--font-h);margin-bottom:1.5rem;}
+.partners-logos{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:1rem 1.8rem;}
+.partners-logos span{font-family:var(--font-h);font-weight:700;font-size:.85rem;letter-spacing:.06em;color:var(--muted);padding:.4rem 1rem;border:1px solid var(--border);border-radius:10px;background:var(--surface);transition:color .2s,border-color .2s,box-shadow .2s;}
+.partners-logos span:hover{color:var(--pink);border-color:rgba(255,45,135,.25);box-shadow:0 2px 12px rgba(255,45,135,.1);}
+
+/* ═══════════════════════════════════════════════════════════
+   § 15. FOOTER
+═══════════════════════════════════════════════════════════ */
+footer{background:var(--surface2);border-top:1px solid var(--border);padding:4rem clamp(1.2rem,5vw,4rem) 2rem;position:relative;z-index:1;}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem;margin-bottom:3rem;}
+.footer-brand{max-width:320px;}
+.footer-brand .logo{font-family:var(--font-h);font-weight:800;font-size:1.2rem;letter-spacing:-.02em;background:linear-gradient(120deg,var(--pink),var(--violet));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:1rem;display:inline-block;}
+.footer-brand p{font-size:.9rem;color:var(--text2);line-height:1.7;}
+.footer-col h4{font-family:var(--font-h);font-weight:700;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text);margin-bottom:1rem;}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.55rem;}
+.footer-col ul li a{font-size:.88rem;color:var(--muted);transition:color .2s;}
+.footer-col ul li a:hover{color:var(--pink);}
+.footer-bottom{border-top:1px solid var(--border);padding-top:1.5rem;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem;}
+.footer-bottom p{font-size:.8rem;color:var(--muted);}
+.footer-socials{display:flex;gap:.8rem;}
+.footer-socials a{width:44px;height:44px;border-radius:50%;background:var(--surface);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;transition:border-color .2s,transform .2s,box-shadow .2s;font-size:.8rem;color:var(--muted);}
+.footer-socials a:hover{border-color:var(--pink);transform:translateY(-2px);color:var(--pink);box-shadow:0 4px 12px rgba(255,45,135,.15);}
+
+/* ═══════════════════════════════════════════════════════════
+   § 16. RESPONSIVE
+═══════════════════════════════════════════════════════════ */
+@media(max-width:700px){
+  .footer-grid{grid-template-columns:1fr;gap:2rem;}
+  .modal-body{padding:1.2rem 1.2rem 1.5rem;}
+  .cta-strip{text-align:center;justify-content:center;}
+  .cta-strip-actions{justify-content:center;}
+}
+
+/* ═══════════════════════════════════════════════════════════
+   § 17. GSAP INITIAL STATES
+═══════════════════════════════════════════════════════════ */
+.gsap-fade{opacity:0;transform:translateY(28px);}
+.section-title-wrap{overflow:hidden;}
+.section-title-inner{display:block;}
+
+/* ═══════════════════════════════════════════════════════════
+   § 18. KEYFRAMES
+═══════════════════════════════════════════════════════════ */
+@keyframes fadeIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<!-- Skip to main content -->
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<!-- CURSOR -->
+<div id="cursor" aria-hidden="true"></div>
+
+<!-- NAV -->
+<nav role="navigation" aria-label="Main navigation">
+  <a href="https://www.omnivisiondesign.com" class="nav-logo" aria-label="Omnivision Design - Home">Omnivision Design</a>
+  <ul class="nav-links">
+    <li><a href="https://www.omnivisiondesign.com/">Home</a></li>
+    <li><a href="https://www.omnivisiondesign.com/web-marketing-agency/">About</a></li>
+    <li><a href="https://www.omnivisiondesign.com/services/">Services</a></li>
+    <li><a href="#" class="active" aria-current="page">Our Work</a></li>
+    <li><a href="https://www.omnivisiondesign.com/blog/">Blog</a></li>
+    <li><a href="https://www.omnivisiondesign.com/contact/">Contact</a></li>
+  </ul>
+  <span class="nav-phone" aria-label="Phone number">(514)-655-6276</span>
+  <a href="https://www.omnivisiondesign.com/contact/" class="nav-cta" id="navCta" aria-label="Request a free quote">Request a Quote</a>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div id="mobileMenu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+  <ul>
+    <li><a href="https://www.omnivisiondesign.com/">Home</a></li>
+    <li><a href="https://www.omnivisiondesign.com/web-marketing-agency/">About</a></li>
+    <li><a href="https://www.omnivisiondesign.com/services/">Services</a></li>
+    <li><a href="#" class="active-link">Our Work</a></li>
+    <li><a href="https://www.omnivisiondesign.com/blog/">Blog</a></li>
+    <li><a href="https://www.omnivisiondesign.com/contact/">Contact</a></li>
+  </ul>
+  <button class="menu-close" onclick="toggleMenu()" aria-label="Close navigation menu">✕</button>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="main-content">
+  <div class="hero-orb orb1" aria-hidden="true"></div>
+  <div class="hero-orb orb2" aria-hidden="true"></div>
+  <div class="hero-orb orb3" aria-hidden="true"></div>
+  <p class="hero-eyebrow gsap-fade">Portfolio</p>
+  <h1 class="gsap-fade" id="heroHeading">Our <span>Work</span></h1>
+  <p class="hero-sub gsap-fade">Web design, SEO, SEM, video and social media marketing — results-driven digital work for businesses across Montreal and beyond.</p>
+  <p class="breadcrumb gsap-fade"><a href="https://www.omnivisiondesign.com">Home</a> &rsaquo; Our Work</p>
+  <div class="hero-line" aria-hidden="true"></div>
+</section>
+
+<!-- FILTER BUTTONS -->
+<div class="filters-wrap" id="filters" role="group" aria-label="Filter portfolio by category">
+  <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+  <button class="filter-btn" data-filter="web-design" aria-pressed="false">Web Design</button>
+  <button class="filter-btn" data-filter="seo" aria-pressed="false">SEO</button>
+  <button class="filter-btn" data-filter="sem" aria-pressed="false">SEM</button>
+  <button class="filter-btn" data-filter="logo-design" aria-pressed="false">Logo Design</button>
+  <button class="filter-btn" data-filter="video" aria-pressed="false">Video</button>
+  <button class="filter-btn" data-filter="website-maintenance" aria-pressed="false">Website Maintenance</button>
+</div>
+
+<!-- PORTFOLIO GRID -->
+<section class="grid-section" aria-label="Portfolio projects">
+  <div class="portfolio-grid" id="portfolioGrid">
+
+    <article class="card card-entry" data-category="web-design" onclick="openModal('greene')" aria-label="View Greene Locksmiths project" role="button" tabindex="0">
+      <div class="card-inner">
+        <div class="card-front">
+          <div class="card-img-wrap">
+            <img src="https://www.omnivisiondesign.com/wp-content/uploads/ewpt_cache/653x490_100_1_c_FFFFFF_bedf8bc4f42cdb991f78bec6f36765dd.jpg" alt="Greene Locksmiths website screenshot" loading="lazy" decoding="async" width="653" height="490">
+            <div class="card-overlay" aria-hidden="true"><span class="view-btn">&#9654; View Project</span></div>
+          </div>
+          <div class="card-body">
+            <span class="card-title">Greene Locksmiths</span>
+            <span class="card-tag">Web Design</span>
+          </div>
+        </div>
+        <div class="card-back" aria-hidden="true">
+          <span class="card-back-tag">Web Design</span>
+          <h3 class="card-back-title">Greene Locksmiths</h3>
+          <p class="card-back-desc">A modern, conversion-focused website that clearly communicates emergency locksmith services with trust signals and strong CTAs.</p>
+          <div class="card-back-meta"><span>Montreal</span><span>WordPress</span><span>Local SEO</span></div>
+          <button class="card-back-btn" onclick="openModal('greene');event.stopPropagation()">&#9654; View Project</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="card card-entry" data-category="web-design" onclick="openModal('paramedic')" aria-label="View Paramedic360 project" role="button" tabindex="0">
+      <div class="card-inner">
+        <div class="card-front">
+          <div class="card-img-wrap">
+            <img src="https://www.omnivisiondesign.com/wp-content/uploads/ewpt_cache/653x490_100_1_c_FFFFFF_f34e949feb7a3e6c5d652d06e314f8e5.png" alt="Paramedic360 website screenshot" loading="lazy" decoding="async" width="653" height="490">
+            <div class="card-overlay" aria-hidden="true"><span class="view-btn">&#9654; View Project</span></div>
+          </div>
+          <div class="card-body">
+            <span class="card-title">Paramedic360</span>
+            <span class="card-tag">Web Design</span>
+          </div>
+        </div>
+        <div class="card-back" aria-hidden="true">
+          <span class="card-back-tag">Web Design</span>
+          <h3 class="card-back-title">Paramedic360</h3>
+          <p class="card-back-desc">Clean, authoritative website for a medical training company with course listings, instructor bios, and conversion-optimised user journey.</p>
+          <div class="card-back-meta"><span>Medical Training</span><span>WordPress</span><span>UX Optimised</span></div>
+          <button class="card-back-btn" onclick="openModal('paramedic');event.stopPropagation()">&#9654; View Project</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="card card-entry" data-category="web-design" onclick="openModal('archex')" aria-label="View Archex project" role="button" tabindex="0">
+      <div class="card-inner">
+        <div class="card-front">
+          <div class="card-img-wrap">
+            <img src="https://www.omnivisiondesign.com/wp-content/uploads/ewpt_cache/653x490_100_1_c_FFFFFF_d7fa6464710aaca0b622d55e56b95cac.png" alt="Archex website screenshot" loading="lazy" decoding="async" width="653" height="490">
+            <div class="card-overlay" aria-hidden="true"><span class="view-btn">&#9654; View Project</span></div>
+          </div>
+          <div class="card-body">
+            <span class="card-title">Archex</span>
+            <span class="card-tag">Web Design</span>
+          </div>
+        </div>
+        <div class="card-back" aria-hidden="true">
+          <span class="card-back-tag">Web Design</span>
+          <h3 class="card-back-title">Archex</h3>
+          <p class="card-back-desc">Premium web presence for a construction and architecture firm with high-quality portfolio imagery and strong SEO foundations.</p>
+          <div class="card-back-meta"><span>Architecture</span><span>WordPress</span><span>SEO-Ready</span></div>
+          <button class="card-back-btn" onclick="openModal('archex');event.stopPropagation()">&#9654; View Project</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="card card-entry" data-category="web-design" onclick="openModal('medaca')" aria-label="View Medaca project" role="button" tabindex="0">
+      <div class="card-inner">
+        <div class="card-front">
+          <div class="card-img-wrap">
+            <img src="https://www.omnivisiondesign.com/wp-content/uploads/ewpt_cache/653x490_100_1_c_FFFFFF_43e41c2f75861288a5484beea70ae41d.png" alt="Medaca website screenshot" loading="lazy" decoding="async" width="653" height="490">
+            <div class="card-overlay" aria-hidden="true"><span class="view-btn">&#9654; View Project</span></div>
+          </div>
+          <div class="card-body">
+            <span class="card-title">Medaca</span>
+            <span class="card-tag">Web Design</span>
+          </div>
+        </div>
+        <div class="card-back" aria-hidden="true">
+          <span class="card-back-tag">Web Design</span>
+          <h3 class="card-back-title">Medaca</h3>
+          <p class="card-back-desc">Sophisticated, trust-building healthcare website with appointment booking integration and HIPAA-conscious content architecture.</p>
+          <div class="card-back-meta"><span>Healthcare</span><span>WordPress</span><span>Booking</span></div>
+          <button class="card-back-btn" onclick="openModal('medaca');event.stopPropagation()">&#9654; View Project</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="card card-entry" data-category="web-design" onclick="openModal('hostsailor')" aria-label="View HostSailor project" role="button" tabindex="0">
+      <div class="card-inner">
+        <div class="card-front">
+          <div class="card-img-wrap">
+            <img src="https://www.omnivisiondesign.com/wp-content/uploads/ewpt_cache/653x490_100_1_c_FFFFFF_25bcd70386bf639025a35703047f3e09.png" alt="HostSailor website screenshot" loading="lazy" decoding="async" width="653" height="490">
+            <div class="card-overlay" aria-hidden="true"><span class="view-btn">&#9654; View Project</span></div>
+          </div>
+          <div class="card-body">
+            <span class="card-title">HostSailor</span>
+            <span class="card-tag">Web Design</span>
+          </div>
+        </div>
+        <div class="card-back" aria-hidden="true">
+          <span class="card-back-tag">Web Design</span>
+          <h3 class="card-back-title">HostSailor</h3>
+          <p class="card-back-desc">Technically sharp hosting website with pricing tables, plan comparisons, and strong conversion elements throughout.</p>
+          <div class="card-back-meta"><span>Web Hosting</span><span>Pricing Tables</span><span>Performance</span></div>
+          <button class="card-back-btn" onclick="openModal('hostsailor');event.stopPropagation()">&#9654; View Project</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="card card-entry" data-category="web-design" onclick="openModal('suitestay')" aria-label="View SuiteStay project" role="button" tabindex="0">
+      <div class="card-inner">
+        <div class="card-front">
+          <div class="card-img-wrap">
+            <img src="https://www.omnivisiondesign.com/wp-content/uploads/ewpt_cache/653x490_100_1_c_FFFFFF_973e0d2be062a69446233938943847d9.png" alt="SuiteStay website screenshot" loading="lazy" decoding="async" width="653" height="490">
+            <div class="card-overlay" aria-hidden="true"><span class="view-btn">&#9654; View Project</span></div>
+          </div>
+          <div class="card-body">
+            <span class="card-title">SuiteStay</span>
+            <span class="card-tag">Web Design</span>
+          </div>
+        </div>
+        <div class="card-back" aria-hidden="true">
+          <span class="card-back-tag">Web Design</span>
+          <h3 class="card-back-title">SuiteStay</h3>
+          <p class="card-back-desc">Luxury property rental website with elegant galleries, availability features, and a booking-oriented conversion layout.</p>
+          <div class="card-back-meta"><span>Real Estate</span><span>Luxury Design</span><span>Booking UI</span></div>
+          <button class="card-back-btn" onclick="openModal('suitestay');event.stopPropagation()">&#9654; View Project</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="card card-entry" data-category="web-design" onclick="openModal('mckell')" aria-label="View McKell Institute project" role="button" tabindex="0">
+      <div class="card-inner">
+        <div class="card-front">
+          <div class="card-img-wrap">
+            <img src="https://www.omnivisiondesign.com/wp-content/uploads/ewpt_cache/653x490_100_1_c_FFFFFF_4cdbfdce12ae5b6142babe7af5a7cf11.png" alt="McKell Institute website screenshot" loading="lazy" decoding="async" width="653" height="490">
+            <div class="card-overlay" aria-hidden="true"><span class="view-btn">&#9654; View Project</span></div>
+          </div>
+          <div class="card-body">
+            <span class="card-title">McKell Institute</span>
+            <span class="card-tag">Web Design</span>
+          </div>
+        </div>
+        <div class="card-back" aria-hidden="true">
+          <span class="card-back-tag">Web Design</span>
+          <h3 class="card-back-title">McKell Institute</h3>
+          <p class="card-back-desc">Editorial-style think-tank website balancing academic authority with modern readability, content hub, and email capture.</p>
+          <div class="card-back-meta"><span>Non-Profit</span><span>Policy Research</span><span>WordPress</span></div>
+          <button class="card-back-btn" onclick="openModal('mckell');event.stopPropagation()">&#9654; View Project</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="card card-entry" data-category="web-design" onclick="openModal('signalalarm')" aria-label="View SignalAlarm project" role="button" tabindex="0">
+      <div class="card-inner">
+        <div class="card-front">
+          <div class="card-img-wrap">
+            <img src="https://www.omnivisiondesign.com/wp-content/uploads/ewpt_cache/653x490_100_1_c_FFFFFF_eca860e4a731ba50e460ebbeaca97581.png" alt="SignalAlarm website screenshot" loading="lazy" decoding="async" width="653" height="490">
+            <div class="card-overlay" aria-hidden="true"><span class="view-btn">&#9654; View Project</span></div>
+          </div>
+          <div class="card-body">
+            <span class="card-title">SignalAlarm</span>
+            <span class="card-tag">Web Design</span>
+          </div>
+        </div>
+        <div class="card-back" aria-hidden="true">
+          <span class="card-back-tag">Web Design</span>
+          <h3 class="card-back-title">SignalAlarm</h3>
+          <p class="card-back-desc">Lead-generating website for a security company with service pages, trust signals, and a strong CTA strategy.</p>
+          <div class="card-back-meta"><span>Security</span><span>Lead Gen</span><span>WordPress</span></div>
+          <button class="card-back-btn" onclick="openModal('signalalarm');event.stopPropagation()">&#9654; View Project</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="card card-entry" data-category="web-design" onclick="openModal('cleantile')" aria-label="View CleanTile project" role="button" tabindex="0">
+      <div class="card-inner">
+        <div class="card-front">
+          <div class="card-img-wrap">
+            <img src="https://www.omnivisiondesign.com/wp-content/uploads/ewpt_cache/653x490_100_1_c_FFFFFF_2c612ae6390a7bbe6ccc03b1e91b63a3.png" alt="CleanTile website screenshot" loading="lazy" decoding="async" width="653" height="490">
+            <div class="card-overlay" aria-hidden="true"><span class="view-btn">&#9654; View Project</span></div>
+          </div>
+          <div class="card-body">
+            <span class="card-title">CleanTile</span>
+            <span class="card-tag">Web Design</span>
+          </div>
+        </div>
+        <div class="card-back" aria-hidden="true">
+          <span class="card-back-tag">Web Design</span>
+          <h3 class="card-back-title">CleanTile</h3>
+          <p class="card-back-desc">Professional tile cleaning website with before-and-after galleries, service area targeting, and frictionless quote request flow.</p>
+          <div class="card-back-meta"><span>Home Services</span><span>Gallery</span><span>Quote Form</span></div>
+          <button class="card-back-btn" onclick="openModal('cleantile');event.stopPropagation()">&#9654; View Project</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="card card-entry" data-category="web-design" onclick="openModal('clinique')" aria-label="View CliniqueAgatha project" role="button" tabindex="0">
+      <div class="card-inner">
+        <div class="card-front">
+          <div class="card-img-wrap">
+            <img src="https://www.omnivisiondesign.com/wp-content/uploads/ewpt_cache/653x490_100_1_c_FFFFFF_d9828a4bc420474d9f24770245eca65f.png" alt="CliniqueAgatha website screenshot" loading="lazy" decoding="async" width="653" height="490">
+            <div class="card-overlay" aria-hidden="true"><span class="view-btn">&#9654; View Project</span></div>
+          </div>
+          <div class="card-body">
+            <span class="card-title">CliniqueAgatha</span>
+            <span class="card-tag">Web Design</span>
+          </div>
+        </div>
+        <div class="card-back" aria-hidden="true">
+          <span class="card-back-tag">Web Design</span>
+          <h3 class="card-back-title">CliniqueAgatha</h3>
+          <p class="card-back-desc">Premium aesthetic clinic website with elegant typography, online booking integration, and a bilingual refined colour palette.</p>
+          <div class="card-back-meta"><span>Aesthetic Clinic</span><span>Booking</span><span>Bilingual</span></div>
+          <button class="card-back-btn" onclick="openModal('clinique');event.stopPropagation()">&#9654; View Project</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="card card-entry" data-category="website-maintenance" onclick="openModal('kbs')" aria-label="View KBS Maintenance project" role="button" tabindex="0">
+      <div class="card-inner">
+        <div class="card-front">
+          <div class="card-img-wrap">
+            <img src="https://www.omnivisiondesign.com/wp-content/uploads/ewpt_cache/653x490_100_1_c_FFFFFF_68f0dd98732c6049b4ed3c534642c746.png" alt="KBS Maintenance website screenshot" loading="lazy" decoding="async" width="653" height="490">
+            <div class="card-overlay" aria-hidden="true"><span class="view-btn">&#9654; View Project</span></div>
+          </div>
+          <div class="card-body">
+            <span class="card-title">KBS Maintenance</span>
+            <span class="card-tag">Maintenance</span>
+          </div>
+        </div>
+        <div class="card-back" aria-hidden="true">
+          <span class="card-back-tag">Maintenance</span>
+          <h3 class="card-back-title">KBS Maintenance</h3>
+          <p class="card-back-desc">Ongoing WordPress maintenance: security monitoring, plugin updates, performance optimisation, and regular backups.</p>
+          <div class="card-back-meta"><span>Security</span><span>Performance</span><span>WordPress</span></div>
+          <button class="card-back-btn" onclick="openModal('kbs');event.stopPropagation()">&#9654; View Project</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="card card-entry" data-category="web-design" onclick="openModal('scanplus')" aria-label="View Scan Plus Tech project" role="button" tabindex="0">
+      <div class="card-inner">
+        <div class="card-front">
+          <div class="card-img-wrap">
+            <img src="https://www.omnivisiondesign.com/wp-content/uploads/ewpt_cache/653x490_100_1_c_FFFFFF_ef5fef10f10dc79310362bfd08d575d7.png" alt="Scan Plus Tech website screenshot" loading="lazy" decoding="async" width="653" height="490">
+            <div class="card-overlay" aria-hidden="true"><span class="view-btn">&#9654; View Project</span></div>
+          </div>
+          <div class="card-body">
+            <span class="card-title">Scan Plus Tech</span>
+            <span class="card-tag">Web Design</span>
+          </div>
+        </div>
+        <div class="card-back" aria-hidden="true">
+          <span class="card-back-tag">Web Design</span>
+          <h3 class="card-back-title">Scan Plus Tech</h3>
+          <p class="card-back-desc">Technology-forward document scanning company website with clear service communication and strong local SEO structure.</p>
+          <div class="card-back-meta"><span>Technology</span><span>B2B</span><span>Local SEO</span></div>
+          <button class="card-back-btn" onclick="openModal('scanplus');event.stopPropagation()">&#9654; View Project</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="card card-entry" data-category="web-design" onclick="openModal('omnivision')" aria-label="View Omnivision Design project" role="button" tabindex="0">
+      <div class="card-inner">
+        <div class="card-front">
+          <div class="card-img-wrap">
+            <img src="https://www.omnivisiondesign.com/wp-content/uploads/ewpt_cache/653x490_100_1_c_FFFFFF_5aefad5ac20ca779f335ef065d8105ea.png" alt="Omnivision Design website screenshot" loading="lazy" decoding="async" width="653" height="490">
+            <div class="card-overlay" aria-hidden="true"><span class="view-btn">&#9654; View Project</span></div>
+          </div>
+          <div class="card-body">
+            <span class="card-title">Omnivision Design</span>
+            <span class="card-tag">Web Design</span>
+          </div>
+        </div>
+        <div class="card-back" aria-hidden="true">
+          <span class="card-back-tag">Web Design</span>
+          <h3 class="card-back-title">Omnivision Design</h3>
+          <p class="card-back-desc">Our own agency site — a showcase of capabilities across web design, SEO, SEM, and digital marketing built to the highest standards.</p>
+          <div class="card-back-meta"><span>Agency Site</span><span>WordPress</span><span>SEO Optimised</span></div>
+          <button class="card-back-btn" onclick="openModal('omnivision');event.stopPropagation()">&#9654; View Project</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="card card-entry" data-category="seo" onclick="openModal('archexseo')" aria-label="View Archex SEO project" role="button" tabindex="0">
+      <div class="card-inner">
+        <div class="card-front">
+          <div class="card-img-wrap">
+            <img src="https://www.omnivisiondesign.com/wp-content/uploads/ewpt_cache/653x490_100_1_c_FFFFFF_0d2dce9d12eb5623ec791094ab2e141f.jpg" alt="Archex SEO project screenshot" loading="lazy" decoding="async" width="653" height="490">
+            <div class="card-overlay" aria-hidden="true"><span class="view-btn">&#9654; View Project</span></div>
+          </div>
+          <div class="card-body">
+            <span class="card-title">Archex SEO</span>
+            <span class="card-tag">SEO</span>
+          </div>
+        </div>
+        <div class="card-back" aria-hidden="true">
+          <span class="card-back-tag">SEO</span>
+          <h3 class="card-back-title">Archex SEO</h3>
+          <p class="card-back-desc">Comprehensive SEO campaign targeting competitive construction keywords with technical audits, content strategy, and link building.</p>
+          <div class="card-back-meta"><span>Construction</span><span>On-Page SEO</span><span>Link Building</span></div>
+          <button class="card-back-btn" onclick="openModal('archexseo');event.stopPropagation()">&#9654; View Project</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="card card-entry" data-category="seo" onclick="openModal('canadapeptide')" aria-label="View Canada Peptide SEO project" role="button" tabindex="0">
+      <div class="card-inner">
+        <div class="card-front">
+          <div class="card-img-wrap">
+            <img src="https://www.omnivisiondesign.com/wp-content/uploads/ewpt_cache/653x490_100_1_c_FFFFFF_fc927b92180d3d4dc2f4d67fe340aad3.jpg" alt="Canada Peptide SEO project screenshot" loading="lazy" decoding="async" width="653" height="490">
+            <div class="card-overlay" aria-hidden="true"><span class="view-btn">&#9654; View Project</span></div>
+          </div>
+          <div class="card-body">
+            <span class="card-title">Canada Peptide SEO</span>
+            <span class="card-tag">SEO</span>
+          </div>
+        </div>
+        <div class="card-back" aria-hidden="true">
+          <span class="card-back-tag">SEO</span>
+          <h3 class="card-back-title">Canada Peptide SEO</h3>
+          <p class="card-back-desc">E-commerce SEO in a competitive niche: technical SEO, product page optimisation, content marketing, and authority building.</p>
+          <div class="card-back-meta"><span>E-Commerce</span><span>Technical SEO</span><span>Content</span></div>
+          <button class="card-back-btn" onclick="openModal('canadapeptide');event.stopPropagation()">&#9654; View Project</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="card card-entry" data-category="seo" onclick="openModal('lazybag')" aria-label="View LazyBagParis SEO project" role="button" tabindex="0">
+      <div class="card-inner">
+        <div class="card-front">
+          <div class="card-img-wrap">
+            <img src="https://www.omnivisiondesign.com/wp-content/uploads/ewpt_cache/653x490_100_1_c_FFFFFF_a95343eebd2c11b5b29c5b2d1edd0aba.jpg" alt="LazyBagParis SEO project screenshot" loading="lazy" decoding="async" width="653" height="490">
+            <div class="card-overlay" aria-hidden="true"><span class="view-btn">&#9654; View Project</span></div>
+          </div>
+          <div class="card-body">
+            <span class="card-title">LazyBagParis SEO</span>
+            <span class="card-tag">SEO</span>
+          </div>
+        </div>
+        <div class="card-back" aria-hidden="true">
+          <span class="card-back-tag">SEO</span>
+          <h3 class="card-back-title">LazyBagParis SEO</h3>
+          <p class="card-back-desc">Multilingual SEO strategy for a fashion brand targeting English and French audiences with structured data implementation.</p>
+          <div class="card-back-meta"><span>Fashion</span><span>Multilingual</span><span>Structured Data</span></div>
+          <button class="card-back-btn" onclick="openModal('lazybag');event.stopPropagation()">&#9654; View Project</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="card card-entry" data-category="seo" onclick="openModal('goldmps')" aria-label="View GoldMPS SEO project" role="button" tabindex="0">
+      <div class="card-inner">
+        <div class="card-front">
+          <div class="card-img-wrap">
+            <img src="https://www.omnivisiondesign.com/wp-content/uploads/ewpt_cache/653x490_100_1_c_FFFFFF_b839ab3eee66f5ca5b5782a6a6ed3c67.jpg" alt="GoldMPS SEO project screenshot" loading="lazy" decoding="async" width="653" height="490">
+            <div class="card-overlay" aria-hidden="true"><span class="view-btn">&#9654; View Project</span></div>
+          </div>
+          <div class="card-body">
+            <span class="card-title">GoldMPS SEO</span>
+            <span class="card-tag">SEO</span>
+          </div>
+        </div>
+        <div class="card-back" aria-hidden="true">
+          <span class="card-back-tag">SEO</span>
+          <h3 class="card-back-title">GoldMPS SEO</h3>
+          <p class="card-back-desc">Full SEO campaign with technical audit, backlink analysis, competitor gap analysis, and content calendar growing organic traffic.</p>
+          <div class="card-back-meta"><span>Technical Audit</span><span>Backlinks</span><span>Competitor Analysis</span></div>
+          <button class="card-back-btn" onclick="openModal('goldmps');event.stopPropagation()">&#9654; View Project</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="card card-entry" data-category="seo" onclick="openModal('sweetdreams')" aria-label="View SweetDreamsBamboo SEO project" role="button" tabindex="0">
+      <div class="card-inner">
+        <div class="card-front">
+          <div class="card-img-wrap">
+            <img src="https://www.omnivisiondesign.com/wp-content/uploads/ewpt_cache/653x490_100_1_c_FFFFFF_507e0e0b13437a3cbd00f7fcb1381e74.jpg" alt="SweetDreamsBamboo SEO project screenshot" loading="lazy" decoding="async" width="653" height="490">
+            <div class="card-overlay" aria-hidden="true"><span class="view-btn">&#9654; View Project</span></div>
+          </div>
+          <div class="card-body">
+            <span class="card-title">SweetDreamsBamboo SEO</span>
+            <span class="card-tag">SEO</span>
+          </div>
+        </div>
+        <div class="card-back" aria-hidden="true">
+          <span class="card-back-tag">SEO</span>
+          <h3 class="card-back-title">SweetDreamsBamboo SEO</h3>
+          <p class="card-back-desc">Content-driven SEO for a sustainable baby products brand targeting eco-conscious shoppers to grow organic revenue.</p>
+          <div class="card-back-meta"><span>E-Commerce</span><span>Content SEO</span><span>Sustainable</span></div>
+          <button class="card-back-btn" onclick="openModal('sweetdreams');event.stopPropagation()">&#9654; View Project</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="card card-entry" data-category="sem" onclick="openModal('signalalarmsem')" aria-label="View Signal Alarm SEM project" role="button" tabindex="0">
+      <div class="card-inner">
+        <div class="card-front">
+          <div class="card-img-wrap">
+            <img src="https://www.omnivisiondesign.com/wp-content/uploads/ewpt_cache/653x490_100_1_c_FFFFFF_e88d43959aed6af302ae995736cc1694.jpg" alt="Signal Alarm SEM project screenshot" loading="lazy" decoding="async" width="653" height="490">
+            <div class="card-overlay" aria-hidden="true"><span class="view-btn">&#9654; View Project</span></div>
+          </div>
+          <div class="card-body">
+            <span class="card-title">Signal Alarm SEM</span>
+            <span class="card-tag">SEM</span>
+          </div>
+        </div>
+        <div class="card-back" aria-hidden="true">
+          <span class="card-back-tag">SEM</span>
+          <h3 class="card-back-title">Signal Alarm SEM</h3>
+          <p class="card-back-desc">Full Google Ads campaign: keyword selection, ad copy, bid strategy, landing page alignment, and conversion tracking.</p>
+          <div class="card-back-meta"><span>Google Ads</span><span>Conversion Tracking</span><span>PPC</span></div>
+          <button class="card-back-btn" onclick="openModal('signalalarmsem');event.stopPropagation()">&#9654; View Project</button>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- MODAL OVERLAY -->
+<div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle" onclick="closeOnBackdrop(event)">
+  <div class="modal" id="modal">
+    <button class="modal-close" onclick="closeModal()" aria-label="Close project modal">✕</button>
+    <div class="modal-img-wrap">
+      <img id="modalImg" src="" alt="" class="modal-img" width="700" height="394" decoding="async">
+    </div>
+    <div class="modal-body">
+      <span class="modal-tag" id="modalTag"></span>
+      <h2 class="modal-title" id="modalTitle"></h2>
+      <p class="modal-desc" id="modalDesc"></p>
+      <div class="modal-meta" id="modalMeta"></div>
+    </div>
+  </div>
+</div>
+
+<!-- PARTNER LOGOS -->
+<div class="partners">
+  <p class="partners-label">Platforms &amp; Partners We Work With</p>
+  <div class="partners-logos">
+    <span>WordPress</span>
+    <span>Shopify</span>
+    <span>WooCommerce</span>
+    <span>Google Ads</span>
+    <span>Facebook</span>
+    <span>LinkedIn</span>
+    <span>Pinterest</span>
+    <span>Instagram</span>
+    <span>X / Twitter</span>
+  </div>
+</div>
+
+<!-- CTA STRIP -->
+<div class="cta-strip gsap-fade">
+  <h2>Ready to grow your business <span>online?</span></h2>
+  <div class="cta-strip-actions">
+    <a href="https://www.omnivisiondesign.com/contact/" class="cta-primary" aria-label="Get a free quote from Omnivision Design">Get a Free Quote</a>
+    <p class="cta-phone">Or call us: <a href="tel:5146556276">(514) 655-6276</a></p>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <span class="logo">Omnivision Design</span>
+      <p>Omnivision Design is a Montreal Web Marketing Company offering internet marketing services to small, medium and large businesses, including public companies, delivering the best web marketing strategy for companies in any industry.</p>
+      <p style="margin-top:.8rem;font-size:.85rem;color:var(--text2)">
+        106-7470 Sherbrooke St W, Montreal, QC H4B 1S5<br>
+        6860 Chester Ave, Montreal, QC H4V 1K6<br>
+        <a href="tel:5146556276" style="color:var(--pink)">(514) 655-6276</a>
+      </p>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="https://www.omnivisiondesign.com/web-marketing-agency/">About</a></li>
+        <li><a href="https://www.omnivisiondesign.com/clients/">Clients</a></li>
+        <li><a href="https://www.omnivisiondesign.com/testimonials/">Testimonials</a></li>
+        <li><a href="https://www.omnivisiondesign.com/team/">Team</a></li>
+        <li><a href="https://www.omnivisiondesign.com/faq/">FAQ</a></li>
+        <li><a href="https://www.omnivisiondesign.com/internship/">Internship</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Latest Posts</h4>
+      <ul>
+        <li><a href="https://www.omnivisiondesign.com/how-to-build-aeo-authority-with-content/">How to Build AEO Authority With Content</a></li>
+        <li><a href="https://www.omnivisiondesign.com/how-to-design-a-website-that-converts-visitors-into-leads/">How to Design a Website That Converts</a></li>
+        <li><a href="https://www.omnivisiondesign.com/ai-threats-explained-what-you-need-to-know/">AI Threats Explained</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2024 Omnivision Design — All rights reserved | <a href="https://www.omnivisiondesign.com/privacy-policy/" style="color:var(--pink)">Privacy Policy</a> | <a href="https://www.omnivisiondesign.com/sitemap/" style="color:var(--pink)">Sitemap</a></p>
+    <div class="footer-socials">
+      <a href="https://www.facebook.com/omnivision.design" aria-label="Facebook" target="_blank" rel="noopener noreferrer">f</a>
+      <a href="https://twitter.com/omnivisiondes" aria-label="Twitter/X" target="_blank" rel="noopener noreferrer">𝕏</a>
+      <a href="http://ca.linkedin.com/in/omnivisiondesign" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">in</a>
+      <a href="https://www.pinterest.com/omnivisiondesign/" aria-label="Pinterest" target="_blank" rel="noopener noreferrer">𝕡</a>
+      <a href="https://www.instagram.com/omnivisiondesign/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">◎</a>
+    </div>
+  </div>
+</footer>
+
+<!-- GSAP CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+<script defer>
+/* ═══════════════════════════════════════════════════════════
+   § JS-1. PROJECT DATA
+═══════════════════════════════════════════════════════════ */
+const projects = {
+  greene:{title:'Greene Locksmiths',tag:'Web Design',img:'https://www.omnivisiondesign.com/wp-content/uploads/ewpt_cache/653x490_100_1_c_FFFFFF_bedf8bc4f42cdb991f78bec6f36765dd.jpg',desc:'A professional web design project for Greene Locksmiths. We created a modern, conversion-focused website that clearly communicates their emergency locksmith services. The design emphasises trust signals, fast load times, and a prominent call-to-action to drive phone calls and quote requests.',meta:['Web Design','Montreal','WordPress','Mobile-Friendly','Local SEO']},
+  paramedic:{title:'Paramedic360',tag:'Web Design',img:'https://www.omnivisiondesign.com/wp-content/uploads/ewpt_cache/653x490_100_1_c_FFFFFF_f34e949feb7a3e6c5d652d06e314f8e5.png',desc:'A clean, authoritative website built for Paramedic360. The project focused on communicating professional credibility in the medical training industry, featuring course listings, instructor bios, registration forms, and an intuitive user journey optimised for conversions.',meta:['Web Design','Medical Training','WordPress','Responsive','UX Optimised']},
+  archex:{title:'Archex',tag:'Web Design',img:'https://www.omnivisiondesign.com/wp-content/uploads/ewpt_cache/653x490_100_1_c_FFFFFF_d7fa6464710aaca0b622d55e56b95cac.png',desc:"A premium web presence for Archex, a construction and architecture firm. The website showcases their portfolio through high-quality imagery and structured project case studies. Built to reflect the brand's precision and quality, with fast performance and strong SEO foundations.",meta:['Web Design','Architecture','WordPress','Portfolio','SEO-Ready']},
+  medaca:{title:'Medaca',tag:'Web Design',img:'https://www.omnivisiondesign.com/wp-content/uploads/ewpt_cache/653x490_100_1_c_FFFFFF_43e41c2f75861288a5484beea70ae41d.png',desc:'Omnivision designed and developed a sophisticated, trust-building website for Medaca — a healthcare and medical services company. The result is a clean, professional digital presence that effectively communicates their services, with appointment booking integration and HIPAA-conscious content architecture.',meta:['Web Design','Healthcare','WordPress','Booking Integration','Mobile-Friendly']},
+  hostsailor:{title:'HostSailor',tag:'Web Design',img:'https://www.omnivisiondesign.com/wp-content/uploads/ewpt_cache/653x490_100_1_c_FFFFFF_25bcd70386bf639025a35703047f3e09.png',desc:'HostSailor is a web hosting provider. Omnivision Design delivered a technically sharp, feature-rich website that clearly presents hosting plans, pricing tables, and technical specifications. The design is modern and competitive within the hosting industry, with strong conversion elements throughout.',meta:['Web Design','Web Hosting','Custom Design','Pricing Tables','Performance-Focused']},
+  suitestay:{title:'SuiteStay',tag:'Web Design',img:'https://www.omnivisiondesign.com/wp-content/uploads/ewpt_cache/653x490_100_1_c_FFFFFF_973e0d2be062a69446233938943847d9.png',desc:'SuiteStay required a luxury-feel property rental website. Omnivision crafted a visually elegant digital experience with property galleries, availability features, and a booking-oriented layout. The design evokes premium hospitality while remaining fully functional and conversion-driven.',meta:['Web Design','Real Estate','Luxury Design','Booking UI','Responsive']},
+  mckell:{title:'McKell Institute',tag:'Web Design',img:'https://www.omnivisiondesign.com/wp-content/uploads/ewpt_cache/653x490_100_1_c_FFFFFF_4cdbfdce12ae5b6142babe7af5a7cf11.png',desc:'The McKell Institute is a public policy think-tank. Omnivision created a credible, editorial-style website that effectively presents research, reports, and policy positions. The design balances academic authority with modern readability, including a content hub and email capture system.',meta:['Web Design','Non-Profit','Policy Research','Editorial Layout','WordPress']},
+  signalalarm:{title:'SignalAlarm',tag:'Web Design',img:'https://www.omnivisiondesign.com/wp-content/uploads/ewpt_cache/653x490_100_1_c_FFFFFF_eca860e4a731ba50e460ebbeaca97581.png',desc:'A complete website project for SignalAlarm, a security and alarm systems company. The site was designed to generate inbound leads, featuring service pages, a trust-building homepage, and a strong call-to-action strategy to convert visitors into customers.',meta:['Web Design','Security Systems','Lead Generation','WordPress','Local Business']},
+  cleantile:{title:'CleanTile',tag:'Web Design',img:'https://www.omnivisiondesign.com/wp-content/uploads/ewpt_cache/653x490_100_1_c_FFFFFF_2c612ae6390a7bbe6ccc03b1e91b63a3.png',desc:'CleanTile needed a clear, professional online presence for their tile cleaning and restoration services. Omnivision delivered a results-focused website with before-and-after gallery sections, service area targeting, and a frictionless quote request flow to increase bookings.',meta:['Web Design','Home Services','Gallery Section','Quote Form','Mobile-Friendly']},
+  clinique:{title:'CliniqueAgatha',tag:'Web Design',img:'https://www.omnivisiondesign.com/wp-content/uploads/ewpt_cache/653x490_100_1_c_FFFFFF_d9828a4bc420474d9f24770245eca65f.png',desc:"A premium aesthetic clinic website for CliniqueAgatha. The design reflects the brand's high-end positioning in the beauty and wellness space — elegant typography, soft imagery, service showcases, online booking integration, and a refined colour palette that instils client confidence.",meta:['Web Design','Aesthetic Clinic','Luxury Feel','Booking System','Bilingual']},
+  kbs:{title:'KBS Maintenance',tag:'Website Maintenance',img:'https://www.omnivisiondesign.com/wp-content/uploads/ewpt_cache/653x490_100_1_c_FFFFFF_68f0dd98732c6049b4ed3c534642c746.png',desc:'Omnivision provides ongoing website maintenance services for KBS Maintenance, keeping their site secure, fast, and up to date. Services include security monitoring, plugin updates, content updates, performance optimisation, and regular backups.',meta:['Website Maintenance','Security','Performance','WordPress','Ongoing Support']},
+  scanplus:{title:'Scan Plus Tech',tag:'Web Design',img:'https://www.omnivisiondesign.com/wp-content/uploads/ewpt_cache/653x490_100_1_c_FFFFFF_ef5fef10f10dc79310362bfd08d575d7.png',desc:'A modern, technology-forward website for Scan Plus Tech, a document scanning and digitisation company. The project emphasised clear service communication, strong local SEO structure, and a professional design that positions the brand as an industry leader in their region.',meta:['Web Design','Technology','B2B','WordPress','Local SEO']},
+  omnivision:{title:'Omnivision Design',tag:'Web Design',img:'https://www.omnivisiondesign.com/wp-content/uploads/ewpt_cache/653x490_100_1_c_FFFFFF_5aefad5ac20ca779f335ef065d8105ea.png',desc:"Omnivision Design's own website — a showcase of our capabilities across web design, SEO, SEM, social media, and digital marketing. Built to the highest performance and conversion standards, the site reflects our expertise and serves as both a portfolio and a lead generation engine.",meta:['Web Design','Agency Site','WordPress','High-Performance','SEO Optimised']},
+  archexseo:{title:'Archex SEO',tag:'SEO',img:'https://www.omnivisiondesign.com/wp-content/uploads/ewpt_cache/653x490_100_1_c_FFFFFF_0d2dce9d12eb5623ec791094ab2e141f.jpg',desc:'Omnivision ran a comprehensive SEO campaign for Archex, targeting competitive construction and architecture keywords. The campaign included technical SEO audits, content strategy, on-page optimisation, and link building — resulting in significantly improved organic search rankings and traffic.',meta:['SEO','Construction','Keyword Research','On-Page SEO','Link Building']},
+  canadapeptide:{title:'Canada Peptide SEO',tag:'SEO',img:'https://www.omnivisiondesign.com/wp-content/uploads/ewpt_cache/653x490_100_1_c_FFFFFF_fc927b92180d3d4dc2f4d67fe340aad3.jpg',desc:'A targeted SEO strategy for Canada Peptide, an e-commerce company in a competitive niche. Omnivision focused on technical SEO, product page optimisation, content marketing, and authority building — delivering measurable organic growth and improved visibility in search results.',meta:['SEO','E-Commerce','Technical SEO','Content Marketing','Organic Growth']},
+  lazybag:{title:'LazyBagParis SEO',tag:'SEO',img:'https://www.omnivisiondesign.com/wp-content/uploads/ewpt_cache/653x490_100_1_c_FFFFFF_a95343eebd2c11b5b29c5b2d1edd0aba.jpg',desc:'SEO project for LazyBagParis, a fashion and accessories brand. Omnivision developed a multilingual SEO strategy targeting both English and French audiences. The work included keyword mapping, on-page content optimisation, and structured data implementation to improve product visibility in search.',meta:['SEO','Fashion','Multilingual','Structured Data','On-Page Optimisation']},
+  goldmps:{title:'GoldMPS SEO',tag:'SEO',img:'https://www.omnivisiondesign.com/wp-content/uploads/ewpt_cache/653x490_100_1_c_FFFFFF_b839ab3eee66f5ca5b5782a6a6ed3c67.jpg',desc:'Omnivision delivered an SEO campaign for GoldMPS targeting high-intent keywords in their industry. The project covered a full technical audit, backlink profile analysis, competitor gap analysis, and a content calendar — substantially growing their organic traffic and domain authority over time.',meta:['SEO','Technical Audit','Backlink Strategy','Competitor Analysis','Content']},
+  sweetdreams:{title:'SweetDreamsBamboo SEO',tag:'SEO',img:'https://www.omnivisiondesign.com/wp-content/uploads/ewpt_cache/653x490_100_1_c_FFFFFF_507e0e0b13437a3cbd00f7fcb1381e74.jpg',desc:'A full SEO engagement for SweetDreamsBamboo, a sustainable baby and lifestyle products brand. Omnivision implemented a content-driven SEO strategy targeting eco-conscious shoppers, combining product optimisation, blog content creation, and category page improvements to grow organic revenue.',meta:['SEO','Sustainable Products','Content SEO','E-Commerce','Organic Revenue']},
+  signalalarmsem:{title:'Signal Alarm SEM',tag:'SEM',img:'https://www.omnivisiondesign.com/wp-content/uploads/ewpt_cache/653x490_100_1_c_FFFFFF_e88d43959aed6af302ae995736cc1694.jpg',desc:'A high-performance Google Ads (SEM) campaign for Signal Alarm. Omnivision managed the full paid search strategy: keyword selection, ad copy creation, bid strategy, landing page alignment, and conversion tracking. The campaign significantly reduced cost-per-lead while increasing qualified enquiries.',meta:['SEM','Google Ads','Conversion Tracking','Landing Pages','Pay-Per-Click']}
+};
+
+/* ═══════════════════════════════════════════════════════════
+   § JS-2. CUSTOM CURSOR
+═══════════════════════════════════════════════════════════ */
+const cursor = document.getElementById('cursor');
+let mx=0,my=0,cx=0,cy=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;});
+(function animCursor(){cx+=(mx-cx)*.28;cy+=(my-cy)*.28;cursor.style.left=cx+'px';cursor.style.top=cy+'px';requestAnimationFrame(animCursor);})();
+document.querySelectorAll('a,button,.card,.filter-btn').forEach(el=>{
+  el.addEventListener('mouseenter',()=>cursor.classList.add('grow'));
+  el.addEventListener('mouseleave',()=>cursor.classList.remove('grow'));
+});
+
+/* ═══════════════════════════════════════════════════════════
+   § JS-3. NAV CTA MAGNETIC EFFECT
+═══════════════════════════════════════════════════════════ */
+const navCta = document.getElementById('navCta');
+if(navCta){
+  navCta.addEventListener('mousemove',e=>{
+    const r=navCta.getBoundingClientRect();
+    const x=(e.clientX-r.left-r.width/2)*.25;
+    const y=(e.clientY-r.top-r.height/2)*.25;
+    navCta.style.transform=`translate(${x}px,${y}px) scale(1.04)`;
+  });
+  navCta.addEventListener('mouseleave',()=>{navCta.style.transform='';});
+}
+
+/* ═══════════════════════════════════════════════════════════
+   § JS-4. FILTER BUTTONS
+═══════════════════════════════════════════════════════════ */
+document.querySelectorAll('.filter-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.filter-btn').forEach(b=>{b.classList.remove('active');b.setAttribute('aria-pressed','false');});
+    btn.classList.add('active');
+    btn.setAttribute('aria-pressed','true');
+    const f=btn.dataset.filter;
+    document.querySelectorAll('.card').forEach(card=>{
+      if(f==='all'||card.dataset.category===f){
+        card.classList.remove('hidden');
+        card.style.animation='fadeIn .4s ease forwards';
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+  });
+});
+
+/* ═══════════════════════════════════════════════════════════
+   § JS-5. MODAL + FOCUS TRAP + PARALLAX TILT
+═══════════════════════════════════════════════════════════ */
+let lastFocused=null;
+const FOCUSABLE='a[href],button:not([disabled]),input,select,textarea,[tabindex]:not([tabindex="-1"])';
+
+function openModal(id){
+  const p=projects[id];if(!p)return;
+  lastFocused=document.activeElement;
+  const mi=document.getElementById('modalImg');
+  mi.src=p.img;mi.alt=p.title+' preview';
+  document.getElementById('modalTag').textContent=p.tag;
+  document.getElementById('modalTitle').textContent=p.title;
+  document.getElementById('modalDesc').textContent=p.desc;
+  const meta=document.getElementById('modalMeta');
+  meta.innerHTML=p.meta.map(m=>`<span>${m}</span>`).join('');
+  const ov=document.getElementById('modalOverlay');
+  ov.classList.add('open');
+  document.body.style.overflow='hidden';
+  setTimeout(()=>{
+    const first=ov.querySelectorAll(FOCUSABLE)[0];
+    if(first)first.focus();
+  },50);
+}
+
+function closeModal(){
+  document.getElementById('modalOverlay').classList.remove('open');
+  document.body.style.overflow='';
+  if(lastFocused)lastFocused.focus();
+}
+
+function closeOnBackdrop(e){if(e.target===document.getElementById('modalOverlay'))closeModal();}
+
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape'){closeModal();return;}
+  const ov=document.getElementById('modalOverlay');
+  if(!ov.classList.contains('open'))return;
+  if(e.key==='Tab'){
+    const focusable=[...ov.querySelectorAll(FOCUSABLE)];
+    if(!focusable.length)return;
+    const first=focusable[0],last=focusable[focusable.length-1];
+    if(e.shiftKey){if(document.activeElement===first){e.preventDefault();last.focus();}}
+    else{if(document.activeElement===last){e.preventDefault();first.focus();}}
+  }
+});
+
+/* Modal image parallax tilt */
+const modalImgWrap=document.querySelector('.modal-img-wrap');
+const modalImg=document.getElementById('modalImg');
+if(modalImgWrap&&modalImg){
+  modalImgWrap.addEventListener('mousemove',e=>{
+    const r=modalImgWrap.getBoundingClientRect();
+    const x=((e.clientX-r.left)/r.width-.5)*10;
+    const y=((e.clientY-r.top)/r.height-.5)*8;
+    modalImg.style.transform=`perspective(800px) rotateX(${-y}deg) rotateY(${x}deg) scale(1.03)`;
+  });
+  modalImgWrap.addEventListener('mouseleave',()=>{modalImg.style.transform='';});
+}
+
+/* ═══════════════════════════════════════════════════════════
+   § JS-6. MOBILE MENU (slide drawer)
+═══════════════════════════════════════════════════════════ */
+function toggleMenu(){
+  const m=document.getElementById('mobileMenu');
+  const btn=document.querySelector('.hamburger');
+  const isOpen=m.classList.contains('open');
+  m.classList.toggle('open');
+  btn.setAttribute('aria-expanded',!isOpen);
+  if(!isOpen){
+    const first=m.querySelectorAll(FOCUSABLE)[0];
+    if(first)setTimeout(()=>first.focus(),100);
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   § JS-7. INTERSECTION OBSERVER — STAGGERED CARD ENTRANCE
+═══════════════════════════════════════════════════════════ */
+(function initCardEntrance(){
+  const cards=[...document.querySelectorAll('.card-entry')];
+  const dirs=['from-left','from-right','from-bottom'];
+  cards.forEach((card,i)=>{
+    const col=i%3;
+    if(col===0)card.classList.add('from-left');
+    else if(col===2)card.classList.add('from-right');
+    else card.classList.add('from-bottom');
+  });
+  const obs=new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        const card=entry.target;
+        const idx=[...document.querySelectorAll('.card-entry:not(.hidden)')].indexOf(card);
+        const delay=Math.min(idx%6,5)*0.1;
+        card.style.transitionDelay=delay+'s';
+        card.classList.add('visible');
+        card.addEventListener('transitionend',()=>{
+          card.style.willChange='auto';
+          card.style.transitionDelay='';
+        },{once:true});
+        obs.unobserve(card);
+      }
+    });
+  },{threshold:0.15});
+  cards.forEach(c=>{c.style.willChange='transform, opacity';obs.observe(c);});
+})();
+
+/* ═══════════════════════════════════════════════════════════
+   § JS-8. TOUCH — TAP TO FLIP ON MOBILE
+═══════════════════════════════════════════════════════════ */
+(function initTouchFlip(){
+  const isTouchDevice=()=>('ontouchstart' in window||navigator.maxTouchPoints>0);
+  if(!isTouchDevice())return;
+  document.querySelectorAll('.card').forEach(card=>{
+    card.addEventListener('touchstart',e=>{
+      e.preventDefault();
+      const isFlipped=card.classList.contains('flipped');
+      document.querySelectorAll('.card.flipped').forEach(c=>c.classList.remove('flipped'));
+      if(!isFlipped)card.classList.add('flipped');
+    },{passive:false});
+  });
+})();
+
+/* ═══════════════════════════════════════════════════════════
+   § JS-9. KEYBOARD CARD ACTIVATION
+═══════════════════════════════════════════════════════════ */
+document.querySelectorAll('.card').forEach(card=>{
+  card.addEventListener('keydown',e=>{
+    if(e.key==='Enter'||e.key===' '){e.preventDefault();card.click();}
+  });
+});
+
+/* ═══════════════════════════════════════════════════════════
+   § JS-10. GSAP SCROLL ANIMATIONS
+═══════════════════════════════════════════════════════════ */
+window.addEventListener('load',()=>{
+  if(typeof gsap==='undefined'||typeof ScrollTrigger==='undefined'){
+    document.querySelectorAll('.gsap-fade').forEach(el=>{el.style.opacity=1;el.style.transform='none';});
+    return;
+  }
+  gsap.registerPlugin(ScrollTrigger);
+
+  /* Hero heading — word-by-word stagger */
+  const h1=document.getElementById('heroHeading');
+  if(h1){
+    const html=h1.innerHTML;
+    const words=html.split(/(\s+)/);
+    h1.innerHTML=words.map(w=>w.trim()?`<span class="word"><span class="word-inner">${w}</span></span>`:w).join('');
+    gsap.fromTo(h1.querySelectorAll('.word-inner'),
+      {opacity:0,y:40},
+      {opacity:1,y:0,duration:.7,ease:'power3.out',stagger:.08,delay:.1}
+    );
+  }
+
+  /* General gsap-fade elements */
+  gsap.utils.toArray('.gsap-fade').forEach((el,i)=>{
+    if(el===h1)return;
+    gsap.fromTo(el,
+      {opacity:0,y:32},
+      {opacity:1,y:0,duration:.8,ease:'power3.out',
+        delay:i<4?i*.12:0,
+        scrollTrigger:{trigger:el,start:'top 88%',toggleActions:'play none none none'}
+      }
+    );
+  });
+
+  /* Section titles clip reveal */
+  gsap.utils.toArray('.section-title-inner').forEach(el=>{
+    gsap.fromTo(el,
+      {x:-60,opacity:0},
+      {x:0,opacity:1,duration:.9,ease:'power3.out',
+        scrollTrigger:{trigger:el,start:'top 85%',toggleActions:'play none none none'}
+      }
+    );
+  });
+
+  /* CTA strip */
+  gsap.fromTo('.cta-strip',
+    {opacity:0,y:40},
+    {opacity:1,y:0,duration:.8,ease:'power3.out',
+      scrollTrigger:{trigger:'.cta-strip',start:'top 85%',toggleActions:'play none none none'}
+    }
+  );
+});
+</script>
+</body>
+</html>
